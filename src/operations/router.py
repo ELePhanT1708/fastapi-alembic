@@ -27,6 +27,7 @@ async def get_specific_operations(operation_type: str, session: AsyncSession = D
     return res
     # print(res)
 
+
 @router.post("/")
 async def add_specific_operations(new_operation: OperationCreate, session: AsyncSession = Depends(get_async_session)):
     stmt = insert(operation).values(**new_operation.dict())
