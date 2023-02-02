@@ -1,6 +1,18 @@
 version: "3.11"
 
 services:
+#  fastapi_app:
+#    build: .
+#    volumes:
+#      - .:/src
+#    ports:
+#      - "8000:8000"
+#    environment:
+#      - REDIS_HOSTS=local:redis:6379
+#    depends_on:
+#      - db
+
+
   db:
     image: postgres:latest
     ports:
